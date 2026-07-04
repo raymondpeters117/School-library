@@ -14,7 +14,18 @@ function addBook() {
     alert("Fill all fields");
     return;
   }
+const text = "Simple digital system for managing books & borrowing";
+let i = 0;
 
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typingText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 60); // speed
+  }
+}
+
+window.onload = typeWriter;
   books.push({
     id: bookIdCounter++,
     subject,
