@@ -92,18 +92,23 @@ button {
   padding: 10px 15px;
   border: none;
   border-radius: 8px;
-  background: #65a30d;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
 }
 
 button:hover {
-  background: #4d7c0f;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
 }
 
+button:active {
+  transform: scale(0.97);
+}
 .table-container {
   overflow-x: auto;
 }
