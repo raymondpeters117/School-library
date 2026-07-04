@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Library System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📚 School Library Management System</h1>
+</header>
+
+<section class="form-section">
+
+  <h2>Add New Book</h2>
+
+  <input type="text" id="subject" placeholder="Subject (e.g. Math, English)">
+  <input type="text" id="publisher" placeholder="Publisher">
+  <input type="text" id="classLevel" placeholder="Class (e.g. S1, S2, P5)">
+  <input type="number" id="year" placeholder="Year Published">
+  <input type="number" id="copies" placeholder="Number of Copies">
+
+  <button onclick="addBook()">Add Book</button>
+
+</section>
+
+<section class="search-section">
+  <input type="text" id="search" placeholder="Search subject..." onkeyup="searchBook()">
+</section>
+
+<section class="table-section">
+  <table>
+    <thead>
+  <tr>
+    <th>Book ID</th>
+    <th>Subject</th>
+    <th>Publisher</th>
+    <th>Class</th>
+    <th>Year</th>
+    <th>Copies</th>
+    <th>Available</th>
+    <th>Actions</th>
+  </tr>
+</thead>
+    <tbody id="bookList"></tbody>
+  </table>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+<section class="borrow-section">
+  <h2>👨‍🎓 Issue Book to Student</h2>
+
+  <input type="text" id="studentName" placeholder="Student Name">
+  <input type="text" id="studentClass" placeholder="Student Class (S1, S2...)">
+  <input type="number" id="bookId" placeholder="Book ID (from system)">
+
+  <button onclick="borrowBook()">Issue Book</button>
+</section>
+
+<section class="table-section">
+  <h2>📖 Borrow Records</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>Class</th>
+        <th>Subject</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="borrowList"></tbody>
+  </table>
+</section>
