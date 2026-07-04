@@ -1,18 +1,18 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #052e16;
+  background: #0f172a; /* Dark background */
   color: white;
 }
 
 header {
   text-align: center;
   padding: 25px;
-  background: #14532d;
+  background: #14532d; /* Green header */
 }
 
 .sub {
-  color: #bbf7d0;
+  color: #cbd5e1;
   font-size: 16px;
 }
 
@@ -23,16 +23,17 @@ main {
 }
 
 .card {
-  background: #166534;
+  background: #84cc16; /* Lime cards */
+  color: #1f2937;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 8px 20px rgba(132, 204, 22, 0.3);
 }
 
 h2 {
   margin-bottom: 15px;
-  color: #dcfce7;
+  color: #14532d;
 }
 
 .grid {
@@ -46,12 +47,6 @@ input {
   border-radius: 8px;
   border: none;
   outline: none;
-  background: #f0fdf4;
-  color: #14532d;
-}
-
-input::placeholder {
-  color: #4b5563;
 }
 
 button {
@@ -59,15 +54,15 @@ button {
   padding: 10px 15px;
   border: none;
   border-radius: 8px;
-  background: #22c55e;
+  background: #65a30d;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #16a34a;
+  background: #4d7c0f;
   transform: translateY(-2px);
 }
 
@@ -78,7 +73,7 @@ button:hover {
 /* Blinking cursor */
 .cursor {
   display: inline-block;
-  color: #22c55e;
+  color: #84cc16;
   animation: blink 0.8s infinite;
 }
 
@@ -91,9 +86,6 @@ button:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #166534;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 th {
@@ -104,10 +96,10 @@ th {
 th,
 td {
   padding: 10px;
-  border-bottom: 1px solid #22c55e;
+  border-bottom: 1px solid #334155;
   text-align: center;
 }
 
 tr:hover {
-  background: #15803d;
+  background: rgba(132, 204, 22, 0.15);
 }
