@@ -64,7 +64,23 @@ button:hover {
 .table-container {
   overflow-x: auto;
 }
+.sub {
+  color: #94a3b8;
+  font-size: 16px;
+}
 
+/* blinking cursor */
+.cursor {
+  display: inline-block;
+  color: #38bdf8;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 table {
   width: 100%;
   border-collapse: collapse;
