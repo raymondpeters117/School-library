@@ -2,7 +2,9 @@ let books = [];
 let borrowRecords = [];
 let bookIdCounter = 1;
 
-// ADD BOOK
+/* =========================
+   ADD BOOK
+========================= */
 function addBook() {
   let subject = document.getElementById("subject").value.trim();
   let publisher = document.getElementById("publisher").value.trim();
@@ -11,21 +13,10 @@ function addBook() {
   let copies = parseInt(document.getElementById("copies").value);
 
   if (!subject || !publisher || !classLevel || !year || !copies) {
-    alert("Fill all fields");
+    alert("Please fill all fields");
     return;
   }
-const text = "Simple digital system for managing books & borrowing";
-let i = 0;
 
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("typingText").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 60); // speed
-  }
-}
-
-window.onload = typeWriter;
   books.push({
     id: bookIdCounter++,
     subject,
@@ -39,7 +30,9 @@ window.onload = typeWriter;
   renderBooks();
 }
 
-// DISPLAY BOOKS
+/* =========================
+   DISPLAY BOOKS
+========================= */
 function renderBooks(list = books) {
   let table = document.getElementById("bookList");
   table.innerHTML = "";
@@ -62,13 +55,17 @@ function renderBooks(list = books) {
   });
 }
 
-// DELETE BOOK
+/* =========================
+   DELETE BOOK
+========================= */
 function deleteBook(id) {
   books = books.filter(b => b.id !== id);
   renderBooks();
 }
 
-// SEARCH
+/* =========================
+   SEARCH BOOK
+========================= */
 function searchBook() {
   let value = document.getElementById("search").value.toLowerCase();
 
@@ -79,7 +76,9 @@ function searchBook() {
   renderBooks(filtered);
 }
 
-// BORROW BOOK
+/* =========================
+   BORROW BOOK
+========================= */
 function borrowBook() {
   let name = document.getElementById("studentName").value.trim();
   let className = document.getElementById("studentClass").value.trim();
@@ -110,7 +109,9 @@ function borrowBook() {
   renderBorrows();
 }
 
-// BORROW LIST
+/* =========================
+   BORROW LIST
+========================= */
 function renderBorrows() {
   let table = document.getElementById("borrowList");
   table.innerHTML = "";
@@ -126,3 +127,19 @@ function renderBorrows() {
     `;
   });
 }
+
+/* =========================
+   TYPEWRITER EFFECT
+========================= */
+const text = "Organizing knowledge, empowering learning.";
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typingText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 60);
+  }
+}
+
+window.onload = typeWriter;
