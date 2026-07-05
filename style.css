@@ -1,12 +1,12 @@
 /* =========================
-   ROYAL PURPLE THEME
+   BLACK & GOLD PREMIUM THEME
 ========================= */
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  color: white;
-  background: linear-gradient(135deg, #14002b, #2e1065, #4c1d95);
+  color: #ffffff;
+  background: linear-gradient(135deg, #050505, #111111, #1a1a1a);
   background-attachment: fixed;
 }
 
@@ -14,12 +14,13 @@ body {
 header {
   text-align: center;
   padding: 25px;
-  background: #6d28d9;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: #151515;
+  border-bottom: 2px solid #facc15;
+  box-shadow: 0 4px 20px rgba(250, 204, 21, 0.15);
 }
 
 .sub {
-  color: #e9d5ff;
+  color: #d4d4d4;
   font-size: 16px;
 }
 
@@ -39,18 +40,18 @@ main {
   padding: 20px;
   border-radius: 20px;
 
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(250, 204, 21, 0.15);
 
-  box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
 
-  transition: .4s ease;
+  transition: all .4s ease;
 }
 
-/* Reflection */
+/* Gold Reflection */
 .card::before {
   content: "";
   position: absolute;
@@ -61,7 +62,7 @@ main {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255,255,255,.35),
+    rgba(250,204,21,.35),
     transparent
   );
   transform: rotate(25deg);
@@ -73,11 +74,13 @@ main {
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  border-color: #c084fc;
+  transform: translateY(-10px) scale(1.02);
+
+  border-color: #facc15;
+
   box-shadow:
-      0 0 35px rgba(192,132,252,.45),
-      inset 0 1px 1px rgba(255,255,255,.2);
+      0 0 30px rgba(250,204,21,.35),
+      0 15px 40px rgba(0,0,0,.4);
 }
 
 /* =========================
@@ -85,7 +88,7 @@ main {
 ========================= */
 
 h2 {
-  color: #ddd6fe;
+  color: #facc15;
   margin-bottom: 15px;
 }
 
@@ -108,14 +111,20 @@ input {
   padding: 10px;
   border-radius: 8px;
   outline: none;
-  border: 1px solid rgba(255,255,255,.15);
 
-  background: rgba(255,255,255,.08);
+  background: rgba(255,255,255,.05);
   color: white;
+
+  border: 1px solid rgba(250,204,21,.2);
 }
 
 input::placeholder {
-  color: #ddd6fe;
+  color: #d4d4d4;
+}
+
+input:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 10px rgba(250,204,21,.3);
 }
 
 /* =========================
@@ -125,23 +134,26 @@ input::placeholder {
 button {
   margin-top: 10px;
   padding: 10px 18px;
+
   border: none;
   border-radius: 8px;
 
-  background: linear-gradient(135deg, #8b5cf6, #c084fc);
+  background: linear-gradient(135deg, #facc15, #eab308);
 
-  color: white;
+  color: #111;
   font-weight: bold;
+
   cursor: pointer;
 
   transition: .3s;
 
-  box-shadow: 0 6px 18px rgba(139,92,246,.4);
+  box-shadow: 0 6px 18px rgba(250,204,21,.3);
 }
 
 button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(192,132,252,.55);
+
+  box-shadow: 0 0 25px rgba(250,204,21,.6);
 }
 
 /* =========================
@@ -156,26 +168,28 @@ table {
   width: 100%;
   border-collapse: collapse;
 
-  background: rgba(255,255,255,.06);
+  background: rgba(255,255,255,.05);
+
   backdrop-filter: blur(12px);
+
   border-radius: 15px;
   overflow: hidden;
 }
 
 th {
-  background: #6d28d9;
-  color: white;
+  background: #1f1f1f;
+  color: #facc15;
 }
 
 th,
 td {
   padding: 12px;
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(250,204,21,.08);
   text-align: center;
 }
 
 tr:hover {
-  background: rgba(192,132,252,.15);
+  background: rgba(250,204,21,.08);
 }
 
 /* =========================
@@ -183,7 +197,7 @@ tr:hover {
 ========================= */
 
 .cursor {
-  color: #c084fc;
+  color: #facc15;
   animation: blink .8s infinite;
 }
 
