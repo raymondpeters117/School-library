@@ -15,11 +15,21 @@ body{
     min-height:100vh;
 
     /* deeper luxury black gradient + subtle gold glow */
-    background:
-        radial-gradient(circle at top right, rgba(255,215,0,.08), transparent 40%),
-        radial-gradient(circle at bottom left, rgba(255,193,7,.06), transparent 45%),
-        linear-gradient(135deg,#000000,#0a0a0a,#121212,#0b0b0b);
+  body{
+    font-family:Segoe UI, Arial, sans-serif;
+    color:#fff;
+    min-height:100vh;
 
+    /* Background image + dark luxury overlay */
+    background:
+        linear-gradient(
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.85)
+        ),
+        url("images/library-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
     background-attachment:fixed;
 }
 
