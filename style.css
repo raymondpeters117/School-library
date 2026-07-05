@@ -1,5 +1,6 @@
 /* =========================
-   BLACK & GOLD LUXURY THEME
+   PREMIUM BLACK & GOLD THEME
+   (Luxury upgraded version)
 ========================= */
 
 *{
@@ -13,27 +14,27 @@ body{
     color:#fff;
     min-height:100vh;
 
+    /* deeper luxury black gradient + subtle gold glow */
     background:
-        radial-gradient(circle at top right, rgba(250,204,21,.12), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(255,215,0,.08), transparent 35%),
-        linear-gradient(135deg,#000000,#0f0f0f,#1b1b1b);
+        radial-gradient(circle at top right, rgba(255,215,0,.08), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(255,193,7,.06), transparent 45%),
+        linear-gradient(135deg,#000000,#0a0a0a,#121212,#0b0b0b);
 
     background-attachment:fixed;
 }
 
 /* Scrollbar */
-
 ::-webkit-scrollbar{
     width:10px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#facc15;
+    background:linear-gradient(180deg,#d4af37,#b8860b);
     border-radius:20px;
 }
 
 ::-webkit-scrollbar-track{
-    background:#111;
+    background:#0a0a0a;
 }
 
 /* =========================
@@ -44,11 +45,10 @@ header{
     text-align:center;
     padding:30px;
 
-    background:rgba(15,15,15,.9);
+    background:rgba(10,10,10,.85);
+    backdrop-filter:blur(25px);
 
-    backdrop-filter:blur(20px);
-
-    border-bottom:2px solid #facc15;
+    border-bottom:1px solid rgba(212,175,55,.4);
 
     position:sticky;
     top:0;
@@ -57,13 +57,18 @@ header{
 
 header h1{
     font-size:2rem;
-    color:#facc15;
+
+    /* premium gold gradient text */
+    background:linear-gradient(135deg,#f5d67b,#d4af37,#b8860b);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
     letter-spacing:1px;
 }
 
 .sub{
     margin-top:10px;
-    color:#ddd;
+    color:#cfcfcf;
 }
 
 /* =========================
@@ -81,71 +86,57 @@ main{
 ========================= */
 
 .card{
-
     position:relative;
-
     overflow:hidden;
 
     margin-bottom:25px;
-
     padding:25px;
 
     border-radius:20px;
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.04);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(22px);
 
-    border:1px solid rgba(250,204,21,.15);
+    border:1px solid rgba(212,175,55,.15);
 
-    box-shadow:0 10px 35px rgba(0,0,0,.35);
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
 
     transition:.4s;
 }
 
 /* Gold Shine */
-
 .card::before{
-
     content:"";
-
     position:absolute;
-
-    top:-80%;
-
+    top:-90%;
     left:-100%;
-
     width:60%;
-
-    height:250%;
+    height:260%;
 
     background:linear-gradient(
         120deg,
         transparent,
-        rgba(250,204,21,.25),
+        rgba(212,175,55,.25),
         transparent
     );
 
     transform:rotate(25deg);
-
-    transition:.8s;
+    transition:.9s;
 }
 
 .card:hover::before{
-
-    left:160%;
-
+    left:170%;
 }
 
 .card:hover{
+    transform:translateY(-10px);
 
-    transform:translateY(-8px);
-
-    border-color:#facc15;
+    border-color:#d4af37;
 
     box-shadow:
-        0 0 25px rgba(250,204,21,.3),
-        0 15px 40px rgba(0,0,0,.45);
+        0 0 30px rgba(212,175,55,.25),
+        0 20px 50px rgba(0,0,0,.6);
 }
 
 /* =========================
@@ -153,11 +144,8 @@ main{
 ========================= */
 
 h2{
-
-    color:#facc15;
-
+    color:#d4af37;
     margin-bottom:20px;
-
     font-size:1.4rem;
 }
 
@@ -166,11 +154,8 @@ h2{
 ========================= */
 
 .grid{
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
     gap:15px;
 }
 
@@ -179,34 +164,26 @@ h2{
 ========================= */
 
 input{
-
     width:100%;
-
     padding:12px;
-
     border-radius:10px;
 
-    border:1px solid rgba(250,204,21,.15);
+    border:1px solid rgba(212,175,55,.15);
 
-    background:rgba(255,255,255,.05);
-
+    background:rgba(255,255,255,.03);
     color:white;
 
     transition:.3s;
 }
 
 input::placeholder{
-
-    color:#aaa;
+    color:#999;
 }
 
 input:focus{
-
     outline:none;
-
-    border-color:#facc15;
-
-    box-shadow:0 0 12px rgba(250,204,21,.4);
+    border-color:#d4af37;
+    box-shadow:0 0 15px rgba(212,175,55,.25);
 }
 
 /* =========================
@@ -214,35 +191,30 @@ input:focus{
 ========================= */
 
 button{
-
     margin-top:15px;
-
     padding:12px 22px;
 
     border:none;
-
     border-radius:10px;
 
-    background:linear-gradient(135deg,#facc15,#d4a017);
+    background:linear-gradient(135deg,#f5d67b,#d4af37,#b8860b);
 
     color:#111;
-
     font-weight:bold;
 
     cursor:pointer;
 
     transition:.3s;
+
+    box-shadow:0 6px 20px rgba(212,175,55,.25);
 }
 
 button:hover{
-
     transform:translateY(-3px);
-
-    box-shadow:0 0 20px rgba(250,204,21,.5);
+    box-shadow:0 0 25px rgba(212,175,55,.45);
 }
 
 button:active{
-
     transform:scale(.96);
 }
 
@@ -251,45 +223,36 @@ button:active{
 ========================= */
 
 .table-container{
-
     overflow-x:auto;
 }
 
 table{
-
     width:100%;
-
     border-collapse:collapse;
-
     border-radius:15px;
-
     overflow:hidden;
+
+    background:rgba(255,255,255,.02);
 }
 
 th{
-
-    background:#1a1a1a;
-
-    color:#facc15;
-
+    background:#111;
+    color:#d4af37;
     padding:14px;
+    border-bottom:1px solid rgba(212,175,55,.2);
 }
 
 td{
-
     padding:12px;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 tbody tr{
-
     transition:.3s;
 }
 
 tbody tr:hover{
-
-    background:rgba(250,204,21,.08);
+    background:rgba(212,175,55,.08);
 }
 
 /* =========================
@@ -297,14 +260,11 @@ tbody tr:hover{
 ========================= */
 
 .cursor{
-
-    color:#facc15;
-
+    color:#d4af37;
     animation:blink .8s infinite;
 }
 
 @keyframes blink{
-
     50%{
         opacity:0;
     }
@@ -315,14 +275,11 @@ tbody tr:hover{
 ========================= */
 
 footer{
-
     text-align:center;
-
     padding:20px;
+    color:#999;
 
-    color:#aaa;
-
-    border-top:1px solid rgba(250,204,21,.1);
+    border-top:1px solid rgba(212,175,55,.1);
 
     margin-top:40px;
 }
