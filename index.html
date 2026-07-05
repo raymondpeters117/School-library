@@ -1,53 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>School Library System</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>School Library Management System</title>
+
+  <meta name="description" content="School Library Management System for managing books, issuing books, and tracking borrow records.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
 <header>
   <h1>📚 School Library Management System</h1>
 
-  <!-- ✅ AUTO TYPING SUBTITLE -->
   <p class="sub">
-    <span id="typingText"></span><span class="cursor">|</span>
+    <span id="typingText"></span>
+    <span class="cursor">|</span>
   </p>
 </header>
 
 <main>
 
-  <!-- ADD BOOK -->
+  <!-- Add Book -->
   <section class="card">
     <h2>Add New Book</h2>
 
     <div class="grid">
-      <input type="text" id="subject" placeholder="Subject (Math, English)">
-      <input type="text" id="publisher" placeholder="Publisher">
-      <input type="text" id="classLevel" placeholder="Class (S1, S2...)">
-      <input type="number" id="year" placeholder="Year Published">
-      <input type="number" id="copies" placeholder="Copies">
+
+      <input
+        type="text"
+        id="subject"
+        placeholder="Subject (Math, English)"
+        autocomplete="off">
+
+      <input
+        type="text"
+        id="publisher"
+        placeholder="Publisher"
+        autocomplete="off">
+
+      <input
+        type="text"
+        id="classLevel"
+        placeholder="Class (S1, S2...)"
+        autocomplete="off">
+
+      <input
+        type="number"
+        id="year"
+        placeholder="Year Published"
+        min="1900"
+        max="2100">
+
+      <input
+        type="number"
+        id="copies"
+        placeholder="Copies"
+        min="1">
+
     </div>
 
-    <button onclick="addBook()">➕ Add Book</button>
+    <button type="button" onclick="addBook()">
+      ➕ Add Book
+    </button>
   </section>
 
-  <!-- SEARCH -->
+  <!-- Search -->
   <section class="card">
     <h2>Search Book</h2>
-    <input type="text" id="search" placeholder="Search by subject..." onkeyup="searchBook()">
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Search by subject..."
+      autocomplete="off"
+      onkeyup="searchBook()">
   </section>
 
-  <!-- BOOK TABLE -->
+  <!-- Book List -->
   <section class="card">
     <h2>📚 Book List</h2>
 
     <div class="table-container">
+
       <table>
+
         <thead>
           <tr>
             <th>ID</th>
@@ -60,46 +100,83 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody id="bookList"></tbody>
+
+        <tbody id="bookList">
+        </tbody>
+
       </table>
+
     </div>
+
   </section>
 
-  <!-- BORROW BOOK -->
+  <!-- Issue Book -->
   <section class="card">
+
     <h2>👨‍🎓 Issue Book</h2>
 
     <div class="grid">
-      <input type="text" id="studentName" placeholder="Student Name">
-      <input type="text" id="studentClass" placeholder="Student Class">
-      <input type="number" id="bookId" placeholder="Book ID">
+
+      <input
+        type="text"
+        id="studentName"
+        placeholder="Student Name"
+        autocomplete="off">
+
+      <input
+        type="text"
+        id="studentClass"
+        placeholder="Student Class"
+        autocomplete="off">
+
+      <input
+        type="number"
+        id="bookId"
+        placeholder="Book ID"
+        min="1">
+
     </div>
 
-    <button onclick="borrowBook()">📖 Issue Book</button>
+    <button type="button" onclick="borrowBook()">
+      📖 Issue Book
+    </button>
+
   </section>
 
-  <!-- BORROW RECORDS -->
+  <!-- Borrow Records -->
   <section class="card">
+
     <h2>📄 Borrow Records</h2>
 
     <div class="table-container">
+
       <table>
+
         <thead>
           <tr>
             <th>Student</th>
             <th>Class</th>
             <th>Subject</th>
-            <th>Date</th>
+            <th>Date Issued</th>
           </tr>
         </thead>
-        <tbody id="borrowList"></tbody>
+
+        <tbody id="borrowList">
+        </tbody>
+
       </table>
+
     </div>
+
   </section>
 
 </main>
 
-<script src="script.js"></script>
+<footer>
+  <p>&copy; 2026 School Library Management System | Developed by Raymond Peters</p>
+</footer>
+
+<script src="script.js" defer></script>
 
 </body>
 </html>
