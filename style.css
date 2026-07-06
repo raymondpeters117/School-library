@@ -21,13 +21,7 @@ body{
     min-height:100vh;
 
     /* Background image + dark luxury overlay */
-    background:
-        linear-gradient(
-            rgba(0,0,0,.75),
-            rgba(0,0,0,.85)
-        ),
-        url("back.png");
-
+    background:url("back.png");
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
