@@ -15,18 +15,16 @@ body{
     min-height:100vh;
 
     /* deeper luxury black gradient + subtle gold glow */
-  body{
-    font-family:Segoe UI, Arial, sans-serif;
-    color:#fff;
-    min-height:100vh;
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 
-    /* Background image + dark luxury overlay */
-    background:url("back.png");
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+    background-image: url("background.jpg");
+    background-size: cover;        /* Makes image cover the whole screen */
+    background-position: center;   /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents repeating */
+    background-attachment: fixed;  /* Keeps image fixed when scrolling */
 }
-
 /* Scrollbar */
 ::-webkit-scrollbar{
     width:10px;
